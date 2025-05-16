@@ -42,6 +42,7 @@ export class AppComponent1 implements OnInit {
     // 1b - other, alternative notation, create a FormGroup
     // directly, without the need for .formBuilder.group().
     // AFAIK, this is yet another option to create reactive Forms.
+    // Functionally, this is THE SAME as the option above.
     // this.myReactiveForm = new FormGroup({
     //   email: new FormControl(''),
     //   password: new FormControl('')

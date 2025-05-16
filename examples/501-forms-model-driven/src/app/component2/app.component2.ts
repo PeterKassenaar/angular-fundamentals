@@ -57,8 +57,8 @@ export class AppComponent2 implements OnInit {
       // 2. In Newer versions of Angular the Validators.compose() method is not required anymore.
       //  We can send in a comma-separated list of Validator functions.
       //  See https://angular.io/guide/form-validation#validating-input-in-reactive-forms for more details
-      password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
-      confirm: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirm: ['', [Validators.required, Validators.minLength(6)]],
       customer: this.formBuilder.group({
         prefix: ``,
         firstName: ``,
