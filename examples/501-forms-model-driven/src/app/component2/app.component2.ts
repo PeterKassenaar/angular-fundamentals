@@ -65,7 +65,7 @@ export class AppComponent2 implements OnInit {
         lastName: ``
       })
     }, {validator: passwordMatcher}); // pass in the validator function. NOT required in newer versions of Angular.
-    // Modern angular: just pass in the validator function, like this.formBuilder({...}, passwordMatcher)
+    // Modern angular: just pass in the validator function, like this.formBuilder.group({...}, passwordMatcher)
 
     // Also Modern Angular: use new FormGroup({...}) directly,
     // without the need for .formBuilder.group(). Like so:
