@@ -65,6 +65,31 @@ export class AppComponent2 implements OnInit {
         lastName: ``
       })
     }, {validator: passwordMatcher}); // pass in the validator function. NOT required in newer versions of Angular.
+    // Modern angular: just pass in the validator function, like this.formBuilder({...}, passwordMatcher)
+
+    // Also Modern Angular: use new FormGroup({...}) directly,
+    // without the need for .formBuilder.group(). Like so:
+    // ngOnInit() {
+    //   this.myReactiveForm = new FormGroup({
+    //     email: new FormControl('', {
+    //      nonNullable: true,
+    //      validators: Validators.required }
+    //      ),
+    //     password: new FormControl('', {
+    //       nonNullable: true,
+    //       validators: [Validators.required, Validators.minLength(6)]
+    //     }),
+    //     confirm: new FormControl('', {
+    //       nonNullable: true,
+    //       validators: [Validators.required, Validators.minLength(6)]
+    //     }),
+    //     customer: new FormGroup({
+    //       prefix: new FormControl('', { nonNullable: true }),
+    //       firstName: new FormControl('', { nonNullable: true }),
+    //       lastName: new FormControl('', { nonNullable: true })
+    //     })
+    //   }, { validators: passwordMatcher });
+    // }
 
     // Validating the email field by subscribing to it.
     // We set it to 'required' in the
