@@ -14,7 +14,9 @@ import {Component, OnInit} from '@angular/core';
 
         <!-- Static footer here. Always visible-->
         <hr>
-        Copyright (C) 2024
+        <p class="text-sm-center">
+            Copyright (C) 2017-2025
+        </p>
     `
 })
 export class MainComponent {
