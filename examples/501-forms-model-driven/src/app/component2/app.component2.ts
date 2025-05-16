@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators, AbstractControl, FormControl} from '@angular/forms';
 
 //********************
 // Example 1. Function to match passwords
