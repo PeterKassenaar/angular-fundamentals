@@ -8,7 +8,8 @@ import {FormGroup, FormControl} from "@angular/forms";
     template: `
 		<h1>Can this route be deactivated?</h1>
 		<form [formGroup]="myForm">
-			<input formControlName="txtInput" placeholder="type something useful..." class="input-lg"><br>
+			<input formControlName="txtInput" placeholder="type something useful..."
+             class="form-control-lg"><br>
 		</form>
 		<div>
 			<a routerLink="/home">Home (=navigate away via hyperlink)</a><br>
