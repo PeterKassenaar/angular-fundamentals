@@ -29,6 +29,7 @@ import { CityAddComponent } from './city-add.component';
 import { CityDetailComponent } from './city-detail.component';
 import { CanDeactivateComponent } from './canDeactivateComponent';
 import { LoginComponent } from './login/login.component';
+import {CanDeactivateGuard} from "./shared/guards/canDeActivateGuard";
 
 @NgModule({
   imports: [
@@ -52,7 +53,8 @@ import { LoginComponent } from './login/login.component';
       provide: 'CanAlwaysActivateGuard', // Guard as a function
       useValue: guardFunction
     },
-    CanActivateViaAuthGuard
+    CanActivateViaAuthGuard,
+    CanDeactivateGuard
   ],
   bootstrap: [MainComponent]
 })

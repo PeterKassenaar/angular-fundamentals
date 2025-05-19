@@ -1,5 +1,5 @@
 // app.component.ts
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {City} from './shared/model/city.model';
 import {CityService} from './shared/services/city.service';
 
@@ -9,7 +9,7 @@ import {CityService} from './shared/services/city.service';
 })
 
 // Class
-export class AppComponent {
+export class AppComponent implements OnInit{
   // Properties
   public cities: City[] = [];
   public currentCity?: City;
@@ -41,14 +41,14 @@ export class AppComponent {
   // implementation
   //***********************
   getCities() {
-    if (!this.cities) {
-      this.cityService.getCities().subscribe(
-        cityData => {
-          this.cities = cityData; // 1. success handler
+    if (this.cities.length === 0) {
+      this.cityService.getCities().subscribe({
+        next: (cityData) => {
+          this.cities = cityData;
         },
-        err => console.log(err), // 2. error handler
-        () => console.log('Getting cities complete...') // 3. complete handler
-      );
+        error: (err) => console.log(err),
+        complete: () => console.log('Getting cities complete...')
+      });
     }
   }
 }
