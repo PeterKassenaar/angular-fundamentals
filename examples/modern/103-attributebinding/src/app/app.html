@@ -1,0 +1,29 @@
+<!--The template|content of the main component-->
+<div class="container">
+
+  <!-- ********************************** -->
+  <!-- Using @for() -->
+  <!-- ********************************** -->
+  <h3>My favourite cities are:</h3>
+  <ul class="list-group">
+    @for (city of cities(); track city.id) {
+      <li class="list-group-item"
+          (click)="updateCity(city)">
+        {{ city.id }} - {{ city.name }}
+      </li>
+    }
+  </ul>
+  <hr>
+
+  <!-- Example of Attribute binding -->
+  <!--  We use a local variable called city to display the city name, etc.-->
+  @if (currentCity(); as city) {
+    <div>
+      <img [src]="cityPhoto()"
+           [alt]="city.name"
+           class="cityPhoto">
+      <h2> My city: {{ city.name }}</h2>
+    </div>
+  }
+
+</div>
