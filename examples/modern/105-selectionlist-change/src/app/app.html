@@ -1,0 +1,24 @@
+<!--The template|content of the main component-->
+<div class="container">
+
+  <h3>My favourite cities are:</h3>
+  <!--  Showing the cities in a dropown list: A picture of the city is shown when a city is selected.-->
+  <select class="form-select" (change)="onCitySelected($event)">
+    <option selected>Select a city</option>
+    @for (city of cities(); track city.id) {
+      <option [value]="city.id">{{ city.name }}</option>
+    }
+  </select>
+  <hr>
+
+  <!--  Show the city:-->
+  @if (currentCity(); as city) {
+    <div>
+      <img [src]="cityPhoto()"
+           [alt]="city.name"
+           class="cityPhoto">
+      <h2> My city: {{ city.name }}</h2>
+    </div>
+  }
+
+</div>
