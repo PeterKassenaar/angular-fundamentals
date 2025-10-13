@@ -1,0 +1,42 @@
+<!--The template|content of the main component-->
+<div class="container">
+  <!-- HTML in external template -->
+  <h1>Different kinds of databinding</h1>
+  <!-- ********************************** -->
+  <!-- Properties bound via ngOnInit() -->
+  <!-- ********************************** -->
+  <h3>This is an external template</h3>
+
+  <p>My name is : {{ name() }} (this is a signal/reactive variable on the class file.)</p>
+  <p>My favourite city is : {{ city() }} (ditto)</p>
+  <!-- ********************************** -->
+  <!-- Using @for() -->
+  <!-- ********************************** -->
+  <hr>
+  <h3>My favourite cities are:</h3>
+  <ul>
+    @for (city of cities(); track $index) {
+      <li>{{ city }}</li>
+    }
+  </ul>
+  <hr>
+  <!-- ********************************** -->
+  <!-- Using @if()  -->
+  <!-- ********************************** -->
+  <h3>Using at-if()</h3>
+  @if (cities().length > 3) {
+    <p>You have many favourite cities! (over 3)</p>
+  }
+
+  <!-- ********************************** -->
+  <!-- Using a Model (shared/city.model.ts) -->
+  <!-- ********************************** -->
+  <hr>
+  <h3>Cities, using a Model:</h3>
+  <ul>
+    @for (city of citiesFromModel(); track city.id) {
+      <li>{{ city.id }} - {{ city.name }}</li>
+    }
+  </ul>
+
+</div>

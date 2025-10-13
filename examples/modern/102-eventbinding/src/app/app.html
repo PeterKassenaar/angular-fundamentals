@@ -1,0 +1,40 @@
+<!--The template|content of the main component-->
+<div class="container">
+
+  <!-- ********************************** -->
+  <!-- Using @for() -->
+  <!-- ********************************** -->
+  <h3>My favourite cities are:</h3>
+  <ul>
+    @for (city of cities(); track $index) {
+      <li>{{ city }}</li>
+    }
+  </ul>
+  <hr>
+  <!-- 1. Event binding for a button -->
+  <h2>Event binding : mouse and touch</h2>
+  <button class="btn btn-success"
+          (click)="btnClick()">I am a button
+  </button>
+  <!--    Current value of the counter signal is written in the UI:-->
+  <p>You clicked: {{ counter() }} time(s).</p>
+  <hr>
+
+  <!-- 2. Event binding for keyboard, use $event -->
+  <h2>Event binding : keyboard</h2>
+  <div>
+    <input type="text" class="form-control-lg" placeholder="City..."
+           (keyup)="onKeyUp($event)">
+    <h3>{{ txtKeyUp() }}</h3>
+  </div>
+  <hr>
+
+  <!-- 3. Better event binding, using a 'local template variabele'  -->
+  <h2>Event binding using a local template variable : keyboard</h2>
+  <div>
+    <input type="text" class="form-control-lg" placeholder="City..."
+           #txtCity (keyup)="betterKeyUp()">
+    <h3>{{ txtCity.value }}</h3>
+  </div>
+
+</div>
