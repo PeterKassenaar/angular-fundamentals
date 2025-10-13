@@ -1,8 +1,9 @@
 [Dutch text follows below]
 # Angular-fundamentals
 
-Workshops, exercises and demo's on the training Angular Fundamentals by Peter Kassenaar <mailto:info@kassenaar.com>.
-All examples are on `Angular 17.0.0` or higher, unless otherwise noted.
+This repo is divided into different subfolders.
+- examples/classic - Code examples for Angular < v17
+- examples/modern - Code examples for Angular >= v17
 
 ## Usage
 
@@ -22,8 +23,10 @@ https://kassenaar.com/calendar/ or contact info@kassenaar.com.
 
 # Angular Fundamentals
 
-Voorbeelden en demo's bij de training `Angular Fundamentals` (Peter Kassenaar <mailto:info@kassenaar.com>)
-Alle voorbeelden geschikt zijn voor versie `Angular 17.0.0` of hoger, tenzij anders vermeld.
+Deze repo is gesplitst in verschillende subfolders.
+- examples/classic - Code examples voor Angular < v17
+- examples/modern - Code examples voor Angular >= v17
+
 
 ## Gebruik
 
