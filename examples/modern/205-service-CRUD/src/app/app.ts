@@ -1,4 +1,4 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component, signal, inject, computed } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 import { City } from './shared/model/city.model';
@@ -20,6 +20,9 @@ export class App {
   protected viewingCity = signal<City | null>(null); // For the details panel
   protected isLoading = signal<boolean>(false); // For the main list
   protected isViewingLoading = signal<boolean>(false); // For the details panel
+
+  // Computed signal to determine if a side panel should be visible
+  protected isPanelVisible = computed(() => this.viewingCity() !== null || this.editingCity() !== null);
 
   constructor() {
     this.loadCities();
@@ -59,6 +62,10 @@ export class App {
 
   cancelEdit() {
     this.editingCity.set(null);
+  }
+
+  hideDetails() {
+    this.viewingCity.set(null);
   }
 
   // --- CRUD Operations ---
