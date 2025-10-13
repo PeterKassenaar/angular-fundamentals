@@ -9,7 +9,6 @@ import {City} from './shared/city.model';
   }`]
 })
 
-// Clas
 export class AppComponent implements OnInit {
   // Properties
   currentCity: string = '';
