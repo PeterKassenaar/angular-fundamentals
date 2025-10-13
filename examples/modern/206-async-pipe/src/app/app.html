@@ -1,0 +1,40 @@
+<div class="container">
+
+  <h3>My favourite cities are:</h3>
+
+  @if (cities().length === 0) {
+    <div class="d-flex justify-content-center mt-5">
+      <p>Simulated delay...</p>
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  } @else {
+    <ul class="list-group">
+      @for (city of cities(); track city.id) {
+        <li class="list-group-item" (click)="showPhoto(city)">
+          {{ city.id }} - {{ city.name }}
+        </li>
+      }
+    </ul>
+  }
+
+  <hr>
+
+  @if (selectedCity(); as city) {
+    <div>
+      <h2>City photo:</h2>
+      <!-- The photoBlob() is undefined while the async operation is in progress -->
+      @if (photoBlob() === undefined) {
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      } @else if (cityPhoto(); as photo) {
+        <img [src]="photo" [alt]="city.name" class="cityPhoto">
+      }
+    </div>
+  }
+
+</div>
