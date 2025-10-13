@@ -19,8 +19,22 @@ export class CityService {
     new City(4, 'Enschede', 'Overijssel'),
   ]);
 
+  // Below: the 'API' of this service.
+
   // Method to get all cities as a readonly signal
   getCities() {
     return this.cities.asReadonly();
   }
+
+  // Get a single city by ID
+  getCity(id: number): City | undefined{
+    return this.cities().find(city => city.id === id);
+  }
+
+  // Delete a city by ID
+  deleteCity(id: number): void {
+    // TODO: Implement deleteCity method...
+  }
+
+  // etc...
 }

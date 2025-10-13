@@ -1,0 +1,42 @@
+[
+  {
+	"id"        : 1,
+	"name"      : "Groningen",
+	"province"  : "Groningen",
+	"rating"    : 0,
+	"highlights": "Martinitoren",
+	"photo"     : "https://picsum.photos/seed/Groningen/1024/768"
+  },
+  {
+	"id"        : 2,
+	"name"      : "Hengelo",
+	"province"  : "Overijssel",
+	"rating"    : 0,
+	"highlights": "Stadhuis",
+	"photo"     : "https://picsum.photos/seed/Hengelo/1024/768"
+  },
+  {
+	"id"        : 3,
+	"name"      : "Den Haag",
+	"province"  : "Zuid-Holland",
+	"rating"    : 0,
+	"highlights": "Binnenhof",
+	"photo"     : "https://picsum.photos/seed/Den%20Haag/1024/768"
+  },
+  {
+	"id"        : 4,
+	"name"      : "Enschede",
+	"province"  : "Grote Markt",
+	"rating"    : 0,
+	"highlights": "Twentse Welle museum",
+	"photo"     : "https://picsum.photos/seed/Enschede/1024/768"
+  },
+  {
+	"id"        : 5,
+	"name"      : "Heerlen",
+	"province"  : "Limburg",
+	"rating"    : 0,
+	"highlights": "Mijnbouwmuseum",
+	"photo"     : "https://picsum.photos/seed/Heerlen/1024/768"
+  }
+]
