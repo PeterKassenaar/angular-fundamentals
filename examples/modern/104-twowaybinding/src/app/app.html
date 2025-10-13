@@ -1,0 +1,30 @@
+<!--The template|content of the main component-->
+<div class="container">
+
+  <!-- ********************************** -->
+  <!-- Using @for() -->
+  <!-- ********************************** -->
+  <h3>My favourite cities are:</h3>
+  <ul class="list-group">
+    @for (city of cities(); track city.id) {
+      <li class="list-group-item">
+        {{ city.id }} - {{ city.name }}
+      </li>
+    }
+  </ul>
+  <hr>
+  <!-- Example of Two-way binding -->
+  <h2>Two-way binding</h2>
+  <input type="text" class="form-control-lg"
+         [(ngModel)]="newCity" placeholder="City..."/>
+  <!--Notice: import FormsModule in app.module.ts, because we're using ngModel! -->
+  <h2>{{ newCity() }}</h2>
+
+  <h2>Extensive two-way binding using <code>[value]</code> and <code>(input)</code></h2>
+  <input type="text" class="form-control-lg"
+         [value]="newCityExtended()"
+         (input)="checkMe($event)"
+         placeholder="City..."/>
+  <h2>{{ newCityExtended() }}</h2>
+
+</div>

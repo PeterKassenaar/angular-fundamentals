@@ -1,0 +1,8 @@
+
+/* No specific styles for this component */
+.cityPhoto {
+  max-width: 300px;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 10px;
+}
