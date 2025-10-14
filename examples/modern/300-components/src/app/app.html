@@ -1,0 +1,24 @@
+<!--The template|content of the main component-->
+<div class="container">
+  <h3>My favourite cities are:</h3>
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+        @for (city of cities(); track city.id) {
+          <li class="list-group-item"
+              (click)="updateCity(city)">
+            {{ city.id }} - {{ city.name }}
+          </li>
+        }
+      </ul>
+      <hr>
+    </div>
+    <div class="col">
+      <!--      Show detail component only if there is a current city selected (e.g. if one of the cities is clicked)-->
+      @if (currentCity()) {
+        <city-detail/>
+        <button (click)="clearCity()" class="btn btn-outline-dark">Clear</button>
+      }
+    </div>
+  </div>
+</div>
