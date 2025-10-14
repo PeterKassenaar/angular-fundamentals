@@ -1,15 +1,17 @@
 [Dutch text follows below]
 # Angular-fundamentals
 
+This is the `/modern` folder of the `examples`. It uses a newer version of Angular.
+
 Workshops, exercises and demo's on the training Angular Fundamentals by Peter Kassenaar <mailto:info@kassenaar.com>.
-All examples are on `Angular 17.0.0` or higher, unless otherwise noted.
+All examples are on `Angular 20.0.0` or higher, unless otherwise noted.
 
 ## Usage
 
 -   Every subfolder is a small mini project! There is no central `node_modules`. This is not a monorepo.
 -   Clone the repo and use `npm install` in each different subfolder of the `examples` folder to install dependencies
     per project.
--  Make sure Node.js V.18.19+ is installed before attempting `npm install`.
+-  Make sure Node.js V.20+ is installed before attempting `npm install`.
 
 Please see exercises and slides used during the training for more information (not included).
 
@@ -23,14 +25,14 @@ https://kassenaar.com/calendar/ or contact info@kassenaar.com.
 # Angular Fundamentals
 
 Voorbeelden en demo's bij de training `Angular Fundamentals` (Peter Kassenaar <mailto:info@kassenaar.com>)
-Alle voorbeelden geschikt zijn voor versie `Angular 17.0.0` of hoger, tenzij anders vermeld.
+Alle voorbeelden geschikt zijn voor versie `Angular 20.0.0` of hoger, tenzij anders vermeld.
 
 ## Gebruik
 
 -   Elke subfolder is een eigen (mini) project! Er is geen centrale `node_modules`. Dit is geen monorepo.
 -   Kloon de repo en draai in de submappen van `\examples` de opdracht `npm install` om de dependencies
     per project te installeren.
--   Zorg er voor dat Node.js V.18+ is geinstalleerd voordat `npm install` wordt gebruikt.
+-   Zorg er voor dat Node.js V.20+ is geinstalleerd voordat `npm install` wordt gebruikt.
 
 Zie de oefeningen en slides voor verdere informatie.
 
