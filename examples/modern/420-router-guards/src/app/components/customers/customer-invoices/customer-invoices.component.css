@@ -1,0 +1,28 @@
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.invoice-table th, .invoice-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.invoice-table th {
+  background-color: #f2f2f2;
+}
+.invoice-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.paid {
+  color: green;
+  font-weight: bold;
+}
+.pending {
+  color: orange;
+  font-weight: bold;
+}
+.overdue {
+  color: red;
+  font-weight: bold;
+}

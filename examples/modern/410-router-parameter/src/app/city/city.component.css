@@ -1,0 +1,5 @@
+/* small helper style to style links exactly as we want them */
+a {
+  cursor: pointer;
+  text-decoration: none;
+}

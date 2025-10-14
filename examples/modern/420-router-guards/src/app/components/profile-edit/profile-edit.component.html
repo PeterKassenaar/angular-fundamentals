@@ -1,0 +1,16 @@
+<h3>Edit Profile - canDeactivate guard</h3>
+<p>
+  This form uses the <code>canDeactivate</code> guard. If you want to <strong>navigate
+  away, while there are unsaved changes</strong>, you will be asked to confirm.
+</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div>
+    <label for="name">Name:</label>
+    <input class="form-control form-control-lg" type="text" id="name" name="name" [(ngModel)]="profile.name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input class="form-control form-control-lg" type="email" id="email" name="email" [(ngModel)]="profile.email" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>

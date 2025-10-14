@@ -1,0 +1,9 @@
+<h2>Customers Component</h2>
+<nav>
+  <a [routerLink]="['details']">Customer Details</a> |
+  <a [routerLink]="['invoices']">Customer Invoices</a>
+</nav>
+<div class="content">
+<!--  This customer component has ITS OWN ROUTES!-->
+  <router-outlet></router-outlet>
+</div>

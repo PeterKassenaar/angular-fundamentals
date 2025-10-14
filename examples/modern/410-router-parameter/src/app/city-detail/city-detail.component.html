@@ -1,0 +1,18 @@
+@if (city()) {
+  <div>
+    <h2>Details for {{ city()?.name }}</h2>
+    <ul class="list-group">
+      <li class="list-group-item">Name: {{ city()?.name }}</li>
+      <li class="list-group-item">Province: {{ city()?.province }}</li>
+      <li class="list-group-item">
+        <img src="assets/img/{{ city()?.name }}.jpg" class="img-fluid" alt="Photo of {{ city()?.name }}"/>
+
+      </li>
+    </ul>
+  </div>
+} @else {
+  <div class="spinner-border spinner-border-sm" role="status"></div>
+  <p>
+    Loading city details...
+  </p>
+}

@@ -1,0 +1,13 @@
+<h3>My favourite cities are:</h3>
+<ul class="list-group">
+  @for (city of cities(); track city.id) {
+    <li class="list-group-item">
+      <!--      Adding the parameters to the routerLink-->
+      <a [routerLink]="['/detail', city.id, city.name]">
+        {{ city.id }} - {{ city.name }}
+      </a>
+    </li>
+  }
+</ul>
+<hr>
+

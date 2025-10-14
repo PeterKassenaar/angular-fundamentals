@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Routing Guard Example</h2>
+  <a routerLink="home" routerLinkActive="active">Home</a> |
+  <a routerLink="products" routerLinkActive="active">Products</a> |
+  <a routerLink="customers" routerLinkActive="active">Customers</a> |
+  <a routerLink="profile/edit">Edit Profile</a> |
+  <a routerLink="about" routerLinkActive="active">About</a>
+  <p>Check the file <code>app.routes.ts</code> to see where guards are applied. Also check the
+    <code>auth.service.ts</code> file.
+  </p>
+  <p>
+    This now always returns <code>true</code> for the logged in state! Toggle this to see the effect.
+  </p>
+  <hr>
+  <router-outlet/>
+</div>
