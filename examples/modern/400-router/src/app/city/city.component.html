@@ -1,0 +1,10 @@
+<h3>My favourite cities are:</h3>
+<ul class="list-group">
+  @for (city of cities(); track city.id) {
+    <li class="list-group-item">
+      {{ city.id}} - {{ city.name }}
+    </li>
+  }
+</ul>
+<hr>
+

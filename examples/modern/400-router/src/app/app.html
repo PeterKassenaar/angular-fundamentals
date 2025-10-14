@@ -1,0 +1,15 @@
+<div class="container">
+<h2>Main navigation</h2>
+
+<!-- The main navigation for the site. Notice the use of the routerLink directive instead of href.-->
+<!-- We indicate the current active route with the routerLinkActive directive. It points to a class in the CSS file. -->
+<!-- Of course this navigation can be in its own component.-->
+<a routerLink="home" routerLinkActive="active-link">Home</a> |
+<a routerLink="products" routerLinkActive="active-link">Products</a> |
+<a routerLink="city" routerLinkActive="active-link">City List</a> |
+<a routerLink="about" routerLinkActive="active-link">About</a> |
+
+<hr>
+<!--Components are injected into the Router Outlet-->
+<router-outlet/>
+</div>
