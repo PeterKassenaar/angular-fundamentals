@@ -31,10 +31,18 @@
 
   <!-- 3. Better event binding, using a 'local template variabele'  -->
   <h2>Event binding using a local template variable : keyboard</h2>
+  <div>(spoiler: they work the same, visually.)</div>
   <div>
     <input type="text" class="form-control-lg" placeholder="City..."
            #txtCity (keyup)="betterKeyUp()">
     <h3>{{ txtCity.value }}</h3>
   </div>
 
+  <!--  4. Adding a city to the list, also using a local template variable-->
+  <!--  <h2>Adding a city to the list</h2>-->
+  <!--  <div>-->
+  <!--    <input type="text" class="form-control-lg" placeholder="New City..."-->
+  <!--           #txtNewCity (keyup.enter)="addCity(txtNewCity)">-->
+  <!--    <button class="btn btn-primary" (click)="addCity(txtNewCity)">Add city</button>-->
+  <!--  </div>-->
 </div>

@@ -17,6 +17,8 @@ export class App {
   // Signal holding the current city as a string
   protected city = signal<string>('Groningen');
 
+  protected person = signal({ firstName : 'Peter', lastName : 'Kassenaar'});
+
   // Signal containing an array of strings representing cities.
   protected cities = signal<string[]>(['Groningen', 'Hengelo', 'Den Haag', 'Enschede']);
 

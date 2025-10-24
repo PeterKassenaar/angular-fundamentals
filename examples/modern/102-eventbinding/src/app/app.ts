@@ -51,4 +51,9 @@ export class App {
     // Do something else, for instance, use a green background color.
     // document.body.style.backgroundColor = 'green';
   }
+
+  // 5. adding a new city to the array with cities.
+  addCity(txtNewCity: HTMLInputElement) {
+    this.cities.update(cities => [...cities, txtNewCity.value]);
+  }
 }
