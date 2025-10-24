@@ -1,5 +1,5 @@
 // Import Component decorator and signal function from Angular core
-import {Component, signal} from '@angular/core';
+import {Component, HostListener, signal} from '@angular/core';
 // Import City model class for type definition
 import {City} from './shared/city.model';
 
@@ -35,5 +35,20 @@ export class App {
   // 3. Bind to keyUp-event via local template variable
   betterKeyUp() {
     //... do nothing, for now
+  }
+
+  // 4. Binding to non-DOM events
+  @HostListener('window:offline', ['$event'])
+  onOffline(event: any) {
+    console.log('You are offline!');
+    // Do something else, for instance, use a red background color.
+    // document.body.style.backgroundColor = 'red';
+  }
+
+  @HostListener('window:online', ['$event'])
+  onOnline(event: any) {
+    console.log('You are online again!');
+    // Do something else, for instance, use a green background color.
+    // document.body.style.backgroundColor = 'green';
   }
 }
