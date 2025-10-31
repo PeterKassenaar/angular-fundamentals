@@ -3,7 +3,10 @@
 
   <h3>My favourite cities are:</h3>
   <ul class="list-group">
-    @for (city of cities(); track city.id) {
+    <!-- We now bind to a plain array populated via .subscribe().
+         If you use a Signal instead, the loop would be:
+         @for (city of cities(); track city.id) { ... } -->
+    @for (city of cities; track city.id) {
       <li class="list-group-item"
           (click)="updateCity(city)">
         {{ city.id}} - {{ city.name }}
