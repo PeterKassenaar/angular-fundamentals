@@ -24,7 +24,7 @@ export class App {
   ]);
 
   protected newCity= signal<string>('');
-  newCityExtended= signal<string>('');
+  protected newCityExtended= signal<string>('');
 
   checkMe($event: any) {
     this.newCityExtended.set($event.target.value);

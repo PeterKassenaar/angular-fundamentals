@@ -4,6 +4,7 @@ import {Component, signal} from '@angular/core';
 import {City} from './shared/city.model';
 
 // Component decorator defining metadata for the root component
+// @ts-ignore
 @Component({
   selector: 'app-root',      // CSS selector used to identify this component in HTML
   templateUrl: './app.html', // External HTML template file location
@@ -23,7 +24,6 @@ export class App {
 
   updateCity(city: City) {
     console.log(`Updating city: ${city.name}`);
-
     this.currentCity.set(city);
 
     // Create the image filename. Please note that also bundling the `assets/img` folder is required
