@@ -18,7 +18,7 @@ export class CityDetailComponent {
   // Whenever the route parameters change, get the 'id',
   // then use switchMap to call the service to fetch the city data.
   // toSignal converts the resulting observable into a signal for the template.
-  city = toSignal(
+  protected city = toSignal(
     this.route.paramMap.pipe(
       // switchMap() cancels previous HTTP requests if the route parameters change,
       // preventing race conditions. It takes the route params and returns a new
